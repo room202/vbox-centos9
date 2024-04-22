@@ -1,10 +1,98 @@
-# VirtualBox に CentOS9をインストールする
+# VirtualBox に CentOS Stream 9をインストールする
 
-## VirtualBoxの設定  
+## CentOS Stream 9のイメージをダウンロード
 
+下記URLからCentOS Stream 9のイメージをダウンロード
 
+https://www.centos.org/
 
-## CentOS9のインスール
+![](images/001.png)
+![](images/002.png)
+![](images/003.png)
+
+`ダウンロード`フォルダに保存  
+※サイズが大きいので時間がかかる
+![](images/004.png)
+
+## VirtualBoxの設定
+
+`新規`をクリック  
+![](images/005.png)
+
+`名前`に`CentOS9`と入力して`次へ`をクリック  
+![](images/006.png)
+
+`EFIを有効化(一部のOSのみ)`にチェックを入れて`次へ`をクリック  
+![](images/007.png)
+
+`次へ`をクリック  
+![](images/008.png)
+
+`完了`をクリック  
+![](images/009.png)
+
+`設定`をクリック  
+![](images/010.png)
+
+### ポートフォワーディングの設定
+
+`ネットワーク`をクリック  
+![](images/011.png)
+
+`高度`をクリック  
+![](images/012.png)
+
+`ポートフォワーディング`をクリック  
+![](images/013.png)
+
+`+`マークをクリック  
+![](images/014.png)
+
+下記設定の通りRuleを追加して`OK`をクリック  
+![](images/015.png)
+
+**設定**
+
+| ポート | 用途 |
+| ----- | ---|
+| 22   | SSH用    |
+| 80   | HTTP用   |
+| 3306 | MySQL用  |
+| 8080 | Tomcat用 |
+| 20   | FTP用    |
+| 21   | FTP用    |
+| 445  | Samba用  |
+
+`OK`をクリック  
+![](images/016.png)
+
+## CentOS Stream 9のインスール
+
+`起動`をクリック  
+![](images/017.png)
+
+`↓`をクリック  
+![](images/018.png)
+
+`その他`をクリック  
+![](images/019.png)
+
+`ダウンロード`フォルダにダウンロードしたCentOS Stream 9の`.iso`ファイルを選択して`開く`をクリック
+![](images/020.png)
+
+`マウントとブートのリトライ`をクリック  
+![](images/021.png)
+
+このような画面が表示されたら`次回からこのメッセージを表示しない`にチェックして`キャプチャー`をクリック  
+※右Ctrlキーで抜け出せる  
+![](images/022.png)
+
+`Test this media & install CentOS Stream 9`のまま`Enter`  
+![](images/023.png)
+
+右のウィンドウが表示されていたら邪魔なので、赤枠のアイコンをクリックして閉じる  
+![](images/024.png)
+![](images/025.png)
 
 `ESCキー`を押してスキップする  
 ![](images/030.png)
@@ -12,7 +100,7 @@
 `続行`をクリック  
 ![](images/031.png)
 
-`インスール先`をクリック  
+`インストール先`をクリック  
 ![](images/032.png)
 
 `完了`をクリック  
@@ -40,7 +128,7 @@
 `システムの再起動`をクリック  
 ![](images/040.png)
 
-## 初期設定
+## CentOS Stream 9の初期設定
 
 ユーザー名をクリック  
 ![](images/041.png)
@@ -129,3 +217,24 @@ Active: active (running) になっていれば起動成功です。
 
 SSH接続成功
 ![](images/063.png)
+
+### Deleteキーの設定
+
+`設定`→`キーボード`をクリック  
+![](images/070.png)
+
+`Deleteキー`のチェックを外して`OK`をクリック  
+![](images/071.png)
+![](images/072.png)
+
+`設定`→`設定の保存`をクリック
+![](images/073.png)
+
+`保存`をクリック  
+![](images/074.png)
+
+`はい`をクリック  
+![](images/075.png)
+
+
+
