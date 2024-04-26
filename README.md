@@ -6,6 +6,8 @@
 
 https://www.centos.org/
 
+※ダウンロードに時間がかかる場合は、[コチラ](https://drive.google.com/file/d/11A_h40pmYaYzP_ozPBaRSnOncTeYbXez/view?usp=drive_link)のGoogleドライブからダウンロード
+
 ![](images/001.png)
 ![](images/002.png)
 ![](images/003.png)
