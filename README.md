@@ -21,8 +21,17 @@ https://www.centos.org/
 `新規`をクリック  
 ![](images/005.png)
 
-`名前`に`CentOS9`と入力して`次へ`をクリック  
+`名前`に`CentOS9`と入力して`ISOイメージ`の`↓`をクリック  
 ![](images/006.png)
+
+`その他`をクリック
+![](images/006-2.png)
+
+`ダウンロード`フォルダからダウンロードした`CentOS-Stream-9～.iso`ファイルを選択して`開く`をクリック
+![](images/006-3.png)
+
+`自動インストールをスキップ`にチェックを入れて`次へ`をクリック  
+![](images/006-4.png)
 
 `EFIを有効化(一部のOSのみ)`にチェックを入れて`次へ`をクリック  
 ![](images/007.png)
@@ -33,10 +42,10 @@ https://www.centos.org/
 `完了`をクリック  
 ![](images/009.png)
 
+### ポートフォワーディングの設定
+
 `設定`をクリック  
 ![](images/010.png)
-
-### ポートフォワーディングの設定
 
 `ネットワーク`をクリック  
 ![](images/011.png)
@@ -61,9 +70,6 @@ https://www.centos.org/
 | 80   | HTTP用   |
 | 3306 | MySQL用  |
 | 8080 | Tomcat用 |
-| 20   | FTP用    |
-| 21   | FTP用    |
-| 445  | Samba用  |
 
 `OK`をクリック  
 ![](images/016.png)
@@ -72,18 +78,6 @@ https://www.centos.org/
 
 `起動`をクリック  
 ![](images/017.png)
-
-`↓`をクリック  
-![](images/018.png)
-
-`その他`をクリック  
-![](images/019.png)
-
-`ダウンロード`フォルダにダウンロードしたCentOS Stream 9の`.iso`ファイルを選択して`開く`をクリック
-![](images/020.png)
-
-`マウントとブートのリトライ`をクリック  
-![](images/021.png)
 
 このような画面が表示されたら`次回からこのメッセージを表示しない`にチェックして`キャプチャー`をクリック  
 ※右Ctrlキーで抜け出せる  
@@ -141,73 +135,10 @@ https://www.centos.org/
 `必要ありません`をクリック  
 ![](images/043.png)
 
-`ターミナル`アプリをクリック  
-![](images/044.png)
-
-下記コマンドを実行
-
-```bash
-sudo dnf upgrade -y
-```
-
-パスワードを入力する  
-※入力されていないように見えるが、入力されている  
-![](images/045.png)
-
-`完了しました！`が表示されたらOK  
-![](images/046.png)
-
-下記コマンドを実行
-
-```bash
-LANG=C xdg-user-dirs-gtk-update
-```
-
-![](images/047.png)
-
-`Update Names`をクリック  
-![](images/048.png)
-
-右上のエリアから再起動をする  
-![](images/049.png)
-![](images/050.png)
-![](images/051.png)
-
-再度ログインする  
-![](images/052.png)
-![](images/053.png)
-
-`次回から表示しない`にチェックを入れて`古い名前のままにする`をクリック
-![](images/054.png)
-
-## SSHサーバーの起動
-
-`ターミナル`アプリをクリック  
-![](images/055.png)
-
-下記コマンドを実行
-
-```bash
-sudo systemctl start sshd.service
-```
-
-![](images/056.png)
-
-パスワードを入力する 
-![](images/057.png)
-
-```bash
-sudo systemctl status sshd.service
-```
-
-![](images/058.png)
-
-Active: active (running) になっていれば起動成功です。  
-![](images/059.png)
-
 ## Tera TermからSSH接続
 
 - `ホスト` : localhost  
+- `TCPポート` : 22 である事を確認
 
 ![](images/060.png)
 
@@ -238,5 +169,18 @@ SSH接続成功
 `はい`をクリック  
 ![](images/075.png)
 
+## アップデート
 
+下記コマンドを実行してアップデートする
+
+```bash
+sudo dnf upgrade -y
+```
+
+パスワードを入力する  
+※入力されていないように見えるが、入力されている  
+![](images/045.png)
+
+`完了しました！`が表示されたらOK  
+![](images/046.png)
 
