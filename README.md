@@ -135,10 +135,13 @@ https://www.centos.org/
 `必要ありません`をクリック  
 ![](images/043.png)
 
+インストール完了
+![](images/043-1.png)
+
 ## Tera TermからSSH接続
 
 - `ホスト` : localhost  
-- `TCPポート` : 22 である事を確認
+- `TCPポート` : 22
 
 ![](images/060.png)
 
@@ -171,16 +174,21 @@ SSH接続成功
 
 ## アップデート
 
-下記コマンドを実行してアップデートする
+下記コマンドを実行してCentOSをアップデートする
 
 ```bash
 sudo dnf upgrade -y
 ```
 
+![](images/080.png)
+
 パスワードを入力する  
 ※入力されていないように見えるが、入力されている  
-![](images/045.png)
+![](images/081.png)
+
+インストール中
+![](images/082.png)
 
 `完了しました！`が表示されたらOK  
-![](images/046.png)
+![](images/083.png)
 
