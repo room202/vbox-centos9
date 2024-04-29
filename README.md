@@ -167,14 +167,17 @@ https://www.centos.org/
 SSH接続成功
 ![](images/063.png)
 
-### Deleteキーの設定
+### DeleteキーとMetaキーの設定
 
 `設定`→`キーボード`をクリック  
 ![](images/070.png)
 
-`Deleteキー`のチェックを外して`OK`をクリック  
+- `Deleteキー`のチェックを外す
+- `Metaキー`を`on`に変える
+- `OK`をクリック
+
 ![](images/071.png)
-![](images/072.png)
+
 
 `設定`→`設定の保存`をクリック
 ![](images/073.png)
